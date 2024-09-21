@@ -12,7 +12,7 @@ def fetch_bookmarks():
     )
     cur = conn.cursor()
     cur.execute("""
-        SELECT url, title, add_date, last_modified, icon, taxonomy
+        SELECT url, suggested_title, add_date, last_modified, icon, taxonomy
         FROM bookmarks
     """)
     rows = cur.fetchall()
